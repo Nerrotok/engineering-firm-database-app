@@ -100,8 +100,11 @@ CREATE TABLE project_info (
   FOREIGN KEY (proj_address_id) REFERENCES project_addresses(proj_address_id),
   FOREIGN KEY (architect_id) REFERENCES architects(architect_id),
   FOREIGN KEY (contractor_id) REFERENCES contractors(contractor_id),
-  FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+  FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
+  finalised BOOLEAN,
+  date_complete DATE
 );
+
 
 After this (or before) you will need to create a user to connect to the database through the app and assign them a password. After creating this user, you can set up the Java.
 
